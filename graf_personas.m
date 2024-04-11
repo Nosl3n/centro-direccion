@@ -5,9 +5,7 @@ function graf_personas(x,y,theta)
     % Tamaño de la elipse (ancho y alto de los hombros)
     shoulders_width = 1.2;
     shoulders_height = 0.6;
-    
     % Graficar cada persona
-    figure;
     hold on;
     for i = 1:length(x)
         % Posición de la persona
@@ -45,5 +43,4 @@ function graf_personas(x,y,theta)
     grid on;
     xlabel('X');
     ylabel('Y');
-    title('Personas con cabezas y hombros');
 end
