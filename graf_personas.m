@@ -1,10 +1,10 @@
 function graf_personas(x,y,theta)
     theta = deg2rad(theta);
     % Tamaño del círculo (diámetro de la cabeza)
-    head_diameter = 0.5;
-    % Tamaño de la elipse (ancho y alto de los hombros)
-    shoulders_width = 1.2;
-    shoulders_height = 0.6;
+    head_diameter = 0.25;
+    % Tamaño de la elipse (ancho y largo de los hombros)
+    shoulders_width = 0.5;
+    shoulders_height = 0.28;
     % Graficar cada persona
     hold on;
     for i = 1:length(x)
@@ -34,7 +34,7 @@ function graf_personas(x,y,theta)
         plot(shoulders_x, shoulders_y, 'LineWidth', 2, 'Color', 'red');
             
         % Graficar flecha de dirección
-        arrow_length = 0.3; % Longitud de la flecha
+        arrow_length = 0.2; % Longitud de la flecha
         arrow_x = pos_x + arrow_length * cos(direction);
         arrow_y = pos_y + arrow_length * sin(direction);
         quiver(pos_x, pos_y, arrow_x - pos_x, arrow_y - pos_y, 'LineWidth', 1.5, 'Color', 'green', 'MaxHeadSize', 2);
